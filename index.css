@@ -1,0 +1,249 @@
+body {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url("images/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.header__title {
+margin-top: 40px;
+height: 70px;
+font-size: 40px;
+text-align: center;
+color: #fff;
+text-shadow: 0px 0px 20px  #000;
+background-image: url("images/img_text.png");
+background-size:80%;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.panel {
+    display: flex;
+    gap: 0 56px;
+    margin-top: 95px;
+}
+.panel__addImage {
+    position: relative;
+    border-bottom: 30px solid transparent;
+}
+
+.panel__button {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.panel__but {
+    background: #C2FFCF;
+    width: 1.25em;
+    height: 1.25em;
+    font-size: 48px;
+    border: none;
+    border-radius: 50%;
+    display: table;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px 0.001px #000;
+   transition: 1s;    
+}
+.panel__but:hover {
+    background: rgb(255, 255, 155);
+}
+
+.panel__but-desctiprion {
+    font-size: 26px;
+}
+
+.panel__buttons {
+    margin-top: 27px;
+    gap: 0px;
+    position: absolute;
+    left: 0px;
+    padding-top: 10px;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1;
+    background: rgba(256, 256, 256, 0.95);
+    visibility: hidden;
+}
+.panel__addImage:hover .panel__buttons{
+    transform: translateY(0px);
+    opacity: 1;
+    gap: 0 29px;
+    visibility: visible;
+
+}
+.panel__buttons .panel__but{
+font-size: 30px;
+}
+.panel__buttons .panel__button {
+    margin-bottom: 20px;
+}
+.panel__buttons .panel__but-desctiprion {
+    font-size: 19px;
+    white-space: nowrap;
+}
+
+.picteres {
+    margin-top: 45px;
+}
+
+.picteres__date {
+    font-size: 40px;
+    text-decoration: underline;
+    font-weight: 100;
+}
+.picteres__images {
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.picteres__images img {
+    width: auto;
+    height: 180px;
+    box-shadow: 0 0 20px 0.4px #000;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.picteres__images img:hover {
+    box-shadow: 0 0 20px 2px rgb(233, 48, 73);
+    transform: scale(0.99);
+} 
+
+.highlighter {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(162, 211, 245, 0.2);
+    border: 4px dotted #4A69D7;
+    visibility: hidden;
+
+}
+
+.modal__setings {
+    position: fixed;
+    width: 100px;
+    height: 50px;
+    border: 2px solid #000;
+    text-align: center;
+    background: #fff;
+}
+.modal__setings button{
+   background: transparent;
+   border: 0;
+   cursor: pointer;
+   font-size: 20px;
+}
+.modal__images {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.modal__images .container{
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
+  
+}
+.modal__images-wriper {
+    box-shadow: 2px 2px 30px 1px #000;
+    background: #fff;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal__images-input {
+    width: 80%;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    margin-top: 0px;
+  
+}
+.modal__images-resultFetch {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    max-width: 800px;
+    height: auto;
+}
+.modal__images-img {
+    width: 130px;
+   height: 100px;
+    object-fit: cover;
+}
+.modal__images-input:placeholder {
+   font-size: 24px;
+  
+}
+.modal__images-next {
+    margin-top: 5px;
+}
+
+.modal__close {
+
+ width: 20px;
+ height: 20px;
+ background: #ccc;
+ border-radius: 50%;   
+ text-align: center;
+ line-height: 20px;
+ font-size: 20px;
+  margin-left: auto;
+ cursor: pointer;
+}
+
+#modal__canvas {
+    border: 2px solid #000;
+    
+}
+.modal__images-resultFetch img {
+    transition: .5s;
+    cursor: pointer;
+}
+.modal__images-resultFetch img:hover {
+    box-shadow: 0px 0px 10px 1px #000;
+    transform: scale(1.15);
+}
+
+.pictures__item[data-time="2"] .picteres__images {
+background: red;
+}
+
+
+.picteres__date, .picteres__images img {
+    animation: creating 1.1s;
+}
+
+@keyframes creating {
+    0% {
+        transform: translateY(300px);
+    }
+    100% {
+    }
+}

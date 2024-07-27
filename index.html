@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="normolize.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <h1 class="header__title">My Photo Galley</h1>
+            <div class="panel">
+                <div class="panel__addImage">
+                    <div class="panel__button">
+                        <button class="panel__but">+</button>
+                        <span class="panel__but-desctiprion">add image</span>
+                    </div>
+                    
+                    <div class="panel__buttons">
+                        <div class="panel__button findInEnternet">
+                            <button class="panel__but">+</button>
+                            <span class="panel__but-desctiprion">find in Enternet</span>
+                        </div>
+                        <div class="panel__button drawImage">
+                            <button class="panel__but">+</button>
+                            <span class="panel__but-desctiprion">draw</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel__download">
+                    <div class="panel__button">
+                        <button class="panel__but">+</button>
+                        <span class="panel__but-desctiprion">download zip</span>
+                    </div>
+                </div>
+            </div>
+            <div class="picteres">
+                
+
+            </div>
+        </div>
+    </main>
+
+    <div class="modal__images modal_internet">
+        <div class="container">
+            <div class="modal__images-wriper">
+                <div class="modal__close">✕</div>
+                <input type="text" class="modal__images-input" placeholder="image's name">
+                <div class="modal__images-resultFetch"></div>
+                <button class="modal__images-next">next</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal__images modal_draw">
+        <div class="container">
+            <div class="modal__images-wriper">
+                <div class="modal__close">✕</div>
+                <canvas id="modal__canvas" width="300" height="300"></canvas>
+                <div>
+                    <button id="modal__convas-save">save</button>
+                <button id="modal__convas-pen">pen</button>
+                <button id="modal__convas-rubber">rubber</button>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <script src="lib/fileSave.js"></script>
+      <script src="lib/JS ZIP.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
